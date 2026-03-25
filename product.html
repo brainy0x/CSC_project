@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Practice.css">
+  <title>Velora Atelier — Products</title>
+</head>
+<body>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-inner">
+      ✦ UPCOMING: Summer Gala Collection Launch — June 14, 2025 &nbsp;&nbsp;&nbsp;
+      ✦ NEW: Ankara & Streetwear drop now available &nbsp;&nbsp;&nbsp;
+      ✦ BOOK your bridal consultation today — limited slots &nbsp;&nbsp;&nbsp;
+      ✦ EVENT: Lagos Fashion Week — July 2025 &nbsp;&nbsp;&nbsp;
+      ✦ FREE delivery on orders above ₦150,000 &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><h2>Velora Atelier</h2></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html" class="active">Products</a></li>
+      <li><a href="bookings.html">Bookings</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="trustees.html">Board of Trustees</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Our Collections</h1>
+    <p>Handcrafted for the discerning individual</p>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products-section">
+
+    <!-- FILTER BAR (JavaScript feature) -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+      <button class="filter-btn" onclick="filterProducts('ankara', this)">Ankara</button>
+      <button class="filter-btn" onclick="filterProducts('bridal', this)">Bridal</button>
+      <button class="filter-btn" onclick="filterProducts('ready-to-wear', this)">Ready to Wear</button>
+      <button class="filter-btn" onclick="filterProducts('streetwear', this)">Streetwear</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+      <div class="product-card" data-category="ankara">
+        <img src="Pictures/ankara.jpg" alt="Ankara Classic">
+        <div class="product-info">
+          <h3>Ankara Classic Wrap</h3>
+          <p>Vibrant heritage prints reimagined for the modern silhouette.</p>
+          <span class="product-tag">Ankara</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="ankara">
+        <img src="Pictures/ankara.jpg" alt="Ankara Puff Sleeve">
+        <div class="product-info">
+          <h3>Ankara Puff Sleeve Gown</h3>
+          <p>A statement piece for traditional ceremonies and beyond.</p>
+          <span class="product-tag">Ankara</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="bridal">
+        <img src="Pictures/bridal.jpg" alt="Bridal Gown">
+        <div class="product-info">
+          <h3>Ivory Dream Gown</h3>
+          <p>Handembroidered lace bodice with a cathedral-length train.</p>
+          <span class="product-tag">Bridal</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="bridal">
+        <img src="Pictures/bridal.jpg" alt="Minimalist Bridal">
+        <div class="product-info">
+          <h3>Minimalist Satin Bride</h3>
+          <p>Clean lines, fluid satin, and understated sophistication.</p>
+          <span class="product-tag">Bridal</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="ready-to-wear">
+        <img src="Pictures/ahmadardity-fashion-show-1746622_1920.jpg" alt="RTW Blazer">
+        <div class="product-info">
+          <h3>Power Blazer Set</h3>
+          <p>Tailored perfection for the woman who commands every room.</p>
+          <span class="product-tag">Ready to Wear</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="ready-to-wear">
+        <img src="Pictures/ahmadardity-fashion-show-1746622_1920.jpg" alt="RTW Dress">
+        <div class="product-info">
+          <h3>Evening Draped Dress</h3>
+          <p>Effortless elegance from dinner to the after-party.</p>
+          <span class="product-tag">Ready to Wear</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="streetwear">
+        <img src="Pictures/stretwear m.jpg" alt="Streetwear Jacket">
+        <div class="product-info">
+          <h3>Moto Edge Jacket</h3>
+          <p>Raw-edge leather meets precision tailoring.</p>
+          <span class="product-tag">Streetwear</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="streetwear">
+        <img src="Pictures/streetwear f.jpg" alt="Streetwear Coord">
+        <div class="product-info">
+          <h3>Utility Coord Set</h3>
+          <p>Contemporary edge meets timeless street credibility.</p>
+          <span class="product-tag">Streetwear</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty state -->
+    <p id="emptyMsg" style="display:none; text-align:center; color:#aaa; font-size:16px; padding:40px;">
+      No items found in this category.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Velora Atelier</span>
+    <p>© 2025 Velora Atelier. All rights reserved. &nbsp;|&nbsp;
+      <a href="bookings.html">Book an Appointment</a> &nbsp;|&nbsp;
+      <a href="events.html">Upcoming Events</a>
+    </p>
+  </footer>
+
+  <script>
+    // ── Product Filter (JavaScript feature)
+    function filterProducts(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cards = document.querySelectorAll('.product-card');
+      let visible = 0;
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+          card.style.animation = 'pageFadeIn 0.4s ease';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      document.getElementById('emptyMsg').style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    // ── Scroll reveal
+    const reveals = document.querySelectorAll('.product-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

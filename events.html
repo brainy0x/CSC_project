@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Practice.css">
+  <title>Velora Atelier — Upcoming Events</title>
+</head>
+<body>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-inner">
+      ✦ UPCOMING: Summer Gala Collection Launch — June 14, 2025 &nbsp;&nbsp;&nbsp;
+      ✦ NEW: Ankara & Streetwear drop now available &nbsp;&nbsp;&nbsp;
+      ✦ BOOK your bridal consultation today — limited slots &nbsp;&nbsp;&nbsp;
+      ✦ EVENT: Lagos Fashion Week — July 2025 &nbsp;&nbsp;&nbsp;
+      ✦ FREE delivery on orders above ₦150,000 &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><h2>Velora Atelier</h2></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="bookings.html">Bookings</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="trustees.html">Board of Trustees</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Upcoming Events</h1>
+    <p>Experience Velora Atelier beyond the atelier walls</p>
+  </section>
+
+  <!-- FEATURED COUNTDOWN (JavaScript feature) -->
+  <section style="background: #1a1814; color: white; text-align: center; padding: 60px 40px;">
+    <p style="font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #c9a96e; margin-bottom: 14px;">Next Major Event</p>
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px; font-weight: 300; margin: 0 0 40px; color: white;">Summer Gala Collection Launch</h2>
+    <div id="countdown" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+      <!-- Countdown rendered by JS -->
+    </div>
+    <br><br>
+    <a href="bookings.html" class="rsvp-btn">Reserve Your Seat</a>
+  </section>
+
+  <!-- EVENTS GRID -->
+  <section class="events-section">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 44px; color: #1a1814; font-weight: 300; margin-bottom: 10px;">All Events</h2>
+      <p style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #5a5850;">From runway to runway</p>
+    </div>
+
+    <div class="events-grid">
+
+      <div class="event-card">
+        <div class="event-img-wrap">
+          <img src="Pictures/ahmadardity-fashion-show-1746622_1920.jpg" alt="Gala Launch">
+          <div class="event-date-badge">
+            <span class="day">14</span>
+            <span class="month">Jun</span>
+          </div>
+        </div>
+        <div class="event-body">
+          <h3>Summer Gala Collection Launch</h3>
+          <p>An evening of elegance as we unveil our boldest summer collection yet. Live music, cocktails, and exclusive first access to new pieces.</p>
+          <div class="event-meta">
+            <span>🕖 6:00 PM</span>
+            <span>📍 Eko Hotel, Lagos</span>
+          </div>
+          <button class="rsvp-btn" onclick="rsvpEvent('Summer Gala Collection Launch')">RSVP Now</button>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-img-wrap">
+          <img src="Pictures/ankara.jpg" alt="Ankara Heritage Night">
+          <div class="event-date-badge">
+            <span class="day">28</span>
+            <span class="month">Jun</span>
+          </div>
+        </div>
+        <div class="event-body">
+          <h3>Ankara Heritage Night</h3>
+          <p>A celebration of African culture and craft. Come in your finest Ankara and experience an evening of fashion, food, and storytelling.</p>
+          <div class="event-meta">
+            <span>🕕 5:00 PM</span>
+            <span>📍 Terra Kulture, Lagos</span>
+          </div>
+          <button class="rsvp-btn" onclick="rsvpEvent('Ankara Heritage Night')">RSVP Now</button>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-img-wrap">
+          <img src="Pictures/bridal.jpg" alt="Bridal Showcase">
+          <div class="event-date-badge">
+            <span class="day">12</span>
+            <span class="month">Jul</span>
+          </div>
+        </div>
+        <div class="event-body">
+          <h3>Velora Bridal Showcase</h3>
+          <p>Brides-to-be are invited for an exclusive preview of our 2025 bridal collection. One-on-one consultations available on the day.</p>
+          <div class="event-meta">
+            <span>🕑 2:00 PM</span>
+            <span>📍 Velora Atelier, VI</span>
+          </div>
+          <button class="rsvp-btn" onclick="rsvpEvent('Velora Bridal Showcase')">RSVP Now</button>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-img-wrap">
+          <img src="Pictures/streetwear f.jpg" alt="Lagos Fashion Week">
+          <div class="event-date-badge">
+            <span class="day">19</span>
+            <span class="month">Jul</span>
+          </div>
+        </div>
+        <div class="event-body">
+          <h3>Lagos Fashion Week — Velora Runway</h3>
+          <p>Watch our full collection walk the Lagos Fashion Week runway. Tickets available via the LFW website or through our bookings page.</p>
+          <div class="event-meta">
+            <span>🕗 7:00 PM</span>
+            <span>📍 Oriental Hotel, Lagos</span>
+          </div>
+          <button class="rsvp-btn" onclick="rsvpEvent('Lagos Fashion Week Runway')">RSVP Now</button>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-img-wrap">
+          <img src="Pictures/stretwear m.jpg" alt="Streetwear Pop-Up">
+          <div class="event-date-badge">
+            <span class="day">02</span>
+            <span class="month">Aug</span>
+          </div>
+        </div>
+        <div class="event-body">
+          <h3>Streetwear Pop-Up Shop</h3>
+          <p>A 2-day pop-up showcasing our latest streetwear drops, limited-edition pieces, and surprise collaborations.</p>
+          <div class="event-meta">
+            <span>🕙 10:00 AM</span>
+            <span>📍 The Palms Mall, Lekki</span>
+          </div>
+          <button class="rsvp-btn" onclick="rsvpEvent('Streetwear Pop-Up Shop')">RSVP Now</button>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-img-wrap">
+          <img src="Pictures/ahmadardity-fashion-show-1746622_1920.jpg" alt="End of Year Gala">
+          <div class="event-date-badge">
+            <span class="day">15</span>
+            <span class="month">Dec</span>
+          </div>
+        </div>
+        <div class="event-body">
+          <h3>End of Year Fashion Gala</h3>
+          <p>Close out the year in style. An exclusive black-tie gala with our annual lookbook reveal and surprise award ceremony.</p>
+          <div class="event-meta">
+            <span>🕖 6:30 PM</span>
+            <span>📍 Transcorp Hilton, Abuja</span>
+          </div>
+          <button class="rsvp-btn" onclick="rsvpEvent('End of Year Fashion Gala')">RSVP Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RSVP MODAL -->
+  <div class="modal-overlay" id="rsvpModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeRsvp()">✕</button>
+      <h3>You're In! 🎉</h3>
+      <p id="rsvpText"></p>
+      <br>
+      <a href="bookings.html" class="rsvp-btn">Complete Your Booking</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Velora Atelier</span>
+    <p>© 2025 Velora Atelier. All rights reserved. &nbsp;|&nbsp;
+      <a href="bookings.html">Book an Appointment</a> &nbsp;|&nbsp;
+      <a href="events.html">Upcoming Events</a>
+    </p>
+  </footer>
+
+  <script>
+    // ── Countdown Timer (JavaScript feature)
+    const eventDate = new Date('2025-06-14T18:00:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate - now;
+      if (diff <= 0) {
+        document.getElementById('countdown').innerHTML = '<p style="color:#c9a96e; font-size:22px;">The event is live!</p>';
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      const units = [['Days', days], ['Hours', hours], ['Minutes', mins], ['Seconds', secs]];
+      document.getElementById('countdown').innerHTML = units.map(([label, val]) => `
+        <div style="min-width:90px;">
+          <div style="font-size:54px; font-weight:600; color:#c9a96e; line-height:1; font-family:'Cormorant Garamond',serif;">${String(val).padStart(2,'0')}</div>
+          <div style="font-size:12px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-top:6px;">${label}</div>
+        </div>
+      `).join('');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ── RSVP Modal
+    function rsvpEvent(name) {
+      document.getElementById('rsvpText').textContent = `We've noted your interest in "${name}". Head to our Bookings page to officially confirm your spot!`;
+      document.getElementById('rsvpModal').classList.add('open');
+    }
+    function closeRsvp() {
+      document.getElementById('rsvpModal').classList.remove('open');
+    }
+    document.getElementById('rsvpModal').addEventListener('click', function(e) {
+      if (e.target === this) closeRsvp();
+    });
+
+    // ── Scroll reveal for event cards
+    const cards = document.querySelectorAll('.event-card');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(c => {
+      c.style.opacity = '0';
+      c.style.transform = 'translateY(30px)';
+      c.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      obs.observe(c);
+    });
+  </script>
+</body>
+</html>

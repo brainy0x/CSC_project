@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Practice.css">
+  <title>Velora Atelier — Bookings & Inquiries</title>
+</head>
+<body>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-inner">
+      ✦ UPCOMING: Summer Gala Collection Launch — June 14, 2025 &nbsp;&nbsp;&nbsp;
+      ✦ NEW: Ankara & Streetwear drop now available &nbsp;&nbsp;&nbsp;
+      ✦ BOOK your bridal consultation today — limited slots &nbsp;&nbsp;&nbsp;
+      ✦ EVENT: Lagos Fashion Week — July 2025 &nbsp;&nbsp;&nbsp;
+      ✦ FREE delivery on orders above ₦150,000 &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><h2>Velora Atelier</h2></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="bookings.html" class="active">Bookings</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="trustees.html">Board of Trustees</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Bookings & Inquiries</h1>
+    <p>Schedule your private consultation or send us a message</p>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-section">
+
+    <!-- INFO SIDE -->
+    <div class="booking-info">
+      <h2>Let's Create Something Extraordinary</h2>
+      <p>Whether you're planning a bridal look, seeking a bespoke piece, or simply want to explore our collections in person — we'd love to hear from you. Our atelier is available by appointment only to ensure every client receives undivided attention.</p>
+
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <span>14 Adeola Odeku Street, Victoria Island, Lagos</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📞</div>
+        <span>+234 801 234 5678</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">✉️</div>
+        <span>hello@veloraatelier.com</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">🕐</div>
+        <span>Mon – Sat: 10am – 6pm (Appointments only)</span>
+      </div>
+    </div>
+
+    <!-- FORM SIDE -->
+    <div class="booking-form">
+      <h3>Request an Appointment</h3>
+
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Your full name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="your@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+234 000 000 0000">
+      </div>
+
+      <div class="form-group">
+        <label for="service">Service Type</label>
+        <select id="service">
+          <option value="">— Select a service —</option>
+          <option value="bridal">Bridal Consultation</option>
+          <option value="bespoke">Bespoke Garment</option>
+          <option value="ankara">Ankara Collection</option>
+          <option value="streetwear">Streetwear Fitting</option>
+          <option value="rtw">Ready to Wear Styling</option>
+          <option value="inquiry">General Inquiry</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message / Additional Details</label>
+        <textarea id="message" placeholder="Tell us more about what you're looking for..."></textarea>
+      </div>
+
+      <button class="submit-btn" onclick="submitBooking()">Send Request</button>
+
+      <div class="success-msg" id="successMsg">
+        ✓ Your appointment request has been received! We'll contact you within 24 hours.
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (JavaScript accordion feature) -->
+  <section style="background: #f0ece4; padding: 60px 40px;">
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 40px; text-align: center; color: #1a1814; font-weight: 300; margin-bottom: 10px;">Frequently Asked</h2>
+    <p style="text-align: center; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #5a5850; margin-bottom: 40px;">Everything you need to know</p>
+    <div style="max-width: 700px; margin: 0 auto;" id="faqContainer">
+      <!-- FAQ items inserted by JS -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Velora Atelier</span>
+    <p>© 2025 Velora Atelier. All rights reserved. &nbsp;|&nbsp;
+      <a href="bookings.html">Book an Appointment</a> &nbsp;|&nbsp;
+      <a href="events.html">Upcoming Events</a>
+    </p>
+  </footer>
+
+  <script>
+    // ── Form Validation & Submission (JavaScript feature)
+    function submitBooking() {
+      const name = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value;
+
+      if (!name) { alert('Please enter your full name.'); return; }
+      if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+      if (!service) { alert('Please select a service type.'); return; }
+      if (!date) { alert('Please select a preferred date.'); return; }
+
+      // Simulate successful submission
+      document.getElementById('successMsg').style.display = 'block';
+      document.querySelector('.submit-btn').textContent = 'Request Sent ✓';
+      document.querySelector('.submit-btn').style.background = '#2d6a4f';
+      document.querySelector('.submit-btn').disabled = true;
+
+      // Clear form
+      ['fullname','email','phone','service','date','message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+    }
+
+    // ── FAQ Accordion (JavaScript feature)
+    const faqs = [
+      { q: "Do I need an appointment to visit the atelier?", a: "Yes, Velora Atelier operates exclusively by appointment to ensure each client receives a private, personalized experience. Please use the form above to request a visit." },
+      { q: "How far in advance should I book a bridal consultation?", a: "We recommend booking your bridal consultation at least 6–8 months before your wedding date. Custom gowns require 3–6 months for creation alone." },
+      { q: "Can I commission a completely custom piece?", a: "Absolutely. Bespoke commissions are at the heart of what we do. Book a consultation and our design team will work with you from concept to final fitting." },
+      { q: "What is your return/alteration policy?", a: "We offer complimentary alterations on all bespoke and ready-to-wear pieces within 30 days of purchase. Please contact us to arrange a fitting session." },
+      { q: "Do you ship internationally?", a: "Yes, we ship to select international destinations. Shipping times and fees vary by location. Contact us for details specific to your country." }
+    ];
+
+    const container = document.getElementById('faqContainer');
+    faqs.forEach((item, i) => {
+      const div = document.createElement('div');
+      div.style.cssText = 'border-bottom: 1px solid #ddd; padding: 0;';
+      div.innerHTML = `
+        <button onclick="toggleFaq(${i})" style="width:100%; text-align:left; background:none; border:none; padding:20px 0; font-family:Jost,sans-serif; font-size:16px; font-weight:500; color:#1a1814; cursor:pointer; display:flex; justify-content:space-between; align-items:center;">
+          ${item.q} <span id="icon-${i}" style="font-size:20px; color:#c9a96e;">+</span>
+        </button>
+        <div id="ans-${i}" style="display:none; padding: 0 0 18px; font-size:15px; line-height:1.8; color:#5a5850;">
+          ${item.a}
+        </div>`;
+      container.appendChild(div);
+    });
+
+    function toggleFaq(i) {
+      const ans = document.getElementById('ans-' + i);
+      const icon = document.getElementById('icon-' + i);
+      const isOpen = ans.style.display === 'block';
+      // Close all
+      faqs.forEach((_, j) => {
+        document.getElementById('ans-' + j).style.display = 'none';
+        document.getElementById('icon-' + j).textContent = '+';
+      });
+      if (!isOpen) {
+        ans.style.display = 'block';
+        icon.textContent = '−';
+      }
+    }
+
+    // ── Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date').min = today;
+  </script>
+</body>
+</html>
