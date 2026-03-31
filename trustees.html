@@ -46,70 +46,6 @@
     </div>
   </section>
 
- 
-  <section class="dom-section">
-    <h2>Website DOM Structure</h2>
-    <p style="text-align:center; color:#5a5850; font-size:14px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:40px;">Document Object Model Overview</p>
-
-    <div class="dom-tree">
-<span class="comment">&lt;!-- Document Object Model: Velora Atelier Website --&gt;</span>
-
-<span class="tag">Document</span>
-└── <span class="tag">&lt;html&gt;</span> <span class="attr">lang="en"</span>
-    ├── <span class="tag">&lt;head&gt;</span>
-    │   ├── <span class="tag">&lt;meta&gt;</span> <span class="attr">charset, viewport</span>
-    │   ├── <span class="tag">&lt;link&gt;</span> <span class="attr">rel="stylesheet" href="Practice.css"</span>
-    │   └── <span class="tag">&lt;title&gt;</span>
-    │
-    └── <span class="tag">&lt;body&gt;</span>
-        ├── <span class="tag">&lt;div class="marquee-bar"&gt;</span>
-        │   └── <span class="tag">&lt;div class="marquee-inner"&gt;</span> (scrolling text)
-        │
-        ├── <span class="tag">&lt;nav class="navbar"&gt;</span>
-        │   ├── <span class="tag">&lt;div class="logo"&gt;</span>
-        │   │   └── <span class="tag">&lt;h2&gt;</span> Velora Atelier
-        │   └── <span class="tag">&lt;ul class="nav-links"&gt;</span>
-        │       ├── <span class="tag">&lt;li&gt;</span> → <span class="tag">&lt;a&gt;</span> Home
-        │       ├── <span class="tag">&lt;li&gt;</span> → <span class="tag">&lt;a&gt;</span> Products
-        │       ├── <span class="tag">&lt;li&gt;</span> → <span class="tag">&lt;a&gt;</span> Bookings
-        │       ├── <span class="tag">&lt;li&gt;</span> → <span class="tag">&lt;a&gt;</span> Events
-        │       └── <span class="tag">&lt;li&gt;</span> → <span class="tag">&lt;a&gt;</span> Board of Trustees
-        │
-        ├── <span class="tag">&lt;main&gt;</span> / <span class="tag">&lt;section&gt;</span> (varies per page)
-        │   │
-        │   ├── <span class="comment">── index.html ──</span>
-        │   ├── <span class="tag">&lt;div class="front"&gt;</span> (hero, image, overlay)
-        │   ├── <span class="tag">&lt;div class="mid"&gt;</span> (featured collections)
-        │   ├── <span class="tag">&lt;div class="story"&gt;</span> (about section)
-        │   └── <span class="tag">&lt;div class="testimonials"&gt;</span>
-        │
-        │   ├── <span class="comment">── product.html ──</span>
-        │   ├── <span class="tag">&lt;div class="filter-bar"&gt;</span> (JS filter buttons)
-        │   └── <span class="tag">&lt;div class="products-grid"&gt;</span>
-        │       └── <span class="tag">&lt;div class="product-card"&gt;</span> × 8
-        │
-        │   ├── <span class="comment">── bookings.html ──</span>
-        │   ├── <span class="tag">&lt;div class="booking-info"&gt;</span>
-        │   └── <span class="tag">&lt;div class="booking-form"&gt;</span>
-        │       ├── <span class="tag">&lt;input&gt;</span>, <span class="tag">&lt;select&gt;</span>, <span class="tag">&lt;textarea&gt;</span>
-        │       └── <span class="tag">&lt;button&gt;</span> (JS validation)
-        │
-        │   ├── <span class="comment">── events.html ──</span>
-        │   ├── <span class="tag">&lt;div id="countdown"&gt;</span> (JS live timer)
-        │   └── <span class="tag">&lt;div class="events-grid"&gt;</span>
-        │       └── <span class="tag">&lt;div class="event-card"&gt;</span> × 6
-        │
-        │   └── <span class="comment">── trustees.html ──</span>
-        │       └── <span class="tag">&lt;div class="trustees-grid"&gt;</span>
-        │           └── <span class="tag">&lt;div class="trustee-card"&gt;</span> × 5 (JS DOM injection)
-        │
-        ├── <span class="tag">&lt;div class="modal-overlay"&gt;</span> (JS modal)
-        │
-        └── <span class="tag">&lt;footer&gt;</span>
-            ├── <span class="tag">&lt;span class="footer-logo"&gt;</span>
-            └── <span class="tag">&lt;p&gt;</span> (links + copyright)
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -126,7 +62,7 @@
     // Put your photos in a "Pictures/" folder and update the src values below.
     const trustees = [
       {
-        name: "Group Member 1",
+        name: "Oluwapekarere Adeyinka",
         role: "Chairman & Creative Director",
         bio: "Visionary designer with a decade of haute couture experience across Lagos and Paris.",
         photo: "Pictures/trustee1.jpg"
@@ -154,7 +90,19 @@
         role: "Director of Client Relations",
         bio: "Luxury hospitality expert ensuring every Velora client experience is exceptional.",
         photo: "Pictures/trustee5.jpg"
-      }
+      },
+      {
+        name: "Group Member 6",
+        role: "Director of Marketing & Brand",
+        bio: "Brand storyteller and digital creative responsible for Velora's global aesthetic identity.",
+        photo: "Pictures/trustee4.jpg"
+      },
+      {
+        name: "Group Member 7",
+        role: "Director of Marketing & Brand",
+        bio: "Brand storyteller and digital creative responsible for Velora's global aesthetic identity.",
+        photo: "Pictures/trustee4.jpg"
+      },      
     ];
 
     const grid = document.getElementById('trusteesGrid');
